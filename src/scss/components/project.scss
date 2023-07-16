@@ -1,0 +1,92 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
+.project {
+  background-image: url('../images/lines.svg');
+  background-repeat: repeat-y;
+  background-position: center;
+  border: 1px solid transparent;
+  margin-top: 40px;
+  padding-bottom: 60px;
+
+  &__container {
+    width: 1440px;
+    margin: 0 auto;
+    margin-top: 85px;
+  }
+
+  &__columns {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+  }
+
+  &__column {
+    
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+  }
+
+  &__subtitle-text {
+    margin-left: 26px;
+    @include project-section-subtitle;
+  }
+
+  &__description {
+    width: 480px;
+    color: $white;
+    @include project-section-description;
+  }
+
+  /* 
+  SLIDER
+  */
+  &__slider {
+    position: relative;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 300px 300px 80px 80px;  
+    overflow: hidden;
+  }
+  &__slides {
+    transition: 750ms;
+    transform: translateX(1420px);
+  }
+  &__slide {
+    
+  }
+  &__buttons {
+    width: 130px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__button {
+    width: 20px;
+    height: 20px;
+    padding: 26px;
+    border: 2px solid $white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      cursor: default;
+      border: 2px solid $light-grey;
+    }
+  }
+}

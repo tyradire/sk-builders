@@ -1,0 +1,58 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
+.hero {
+  position: relative;
+  width: 1440px;
+  margin: 0 auto;
+  margin-top: 70px;
+
+  &__title {
+    background: linear-gradient(to right, #FFF 65%, rgba(255, 255, 255, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include project-title;
+  }
+
+  &__description {
+    width: 410px;
+    margin-top: 28px;
+    color: rgba(255, 255, 255, 0.60);
+    @include project-description;
+  }
+
+  &__star-sign {
+    margin-left: 32px;
+    margin-top: 44px;
+  }
+
+  &__image-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 720px;
+    height: 420px;
+    transform: rotate(5.5deg);
+  }
+
+  &__image {
+    background: url('../images/garden-with-pergola-and-swimming-pool.jpg');
+    background-position: center;
+    background-size: cover;
+    filter: brightness(60%);
+    width: 720px;
+    height: 420px;
+    border-radius: 200px;
+  }
+
+  &__image-cover {
+    position: absolute;
+    bottom: -2px;
+    left: -10px;
+    width: 720px;
+    height: 380px;
+    border-radius: 200px;
+    background: linear-gradient(180deg, rgba(13, 13, 13, 0.00) 0%, rgba(13, 13, 13, 0.81) 100%);
+  }
+}

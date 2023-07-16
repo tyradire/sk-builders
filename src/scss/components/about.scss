@@ -1,0 +1,165 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
+.about {
+  margin-top: 150px;
+  padding-bottom: 150px;
+  background-color: $about-bg;
+
+  &__container {
+    width: 1440px;
+    margin: 0 auto;
+    padding-top: 150px;
+  }
+
+  &__columns {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+  }
+
+  &__subtitle-text {
+    margin-left: 26px;
+    @include project-section-subtitle;
+  }
+
+  &__advantages {
+
+  }
+
+  &__advantages-text {
+    width: 300px;
+    color: $light-grey;
+    @include project-advantages-text;
+  }
+
+  &__button {
+    cursor: pointer;
+    padding: 20px 35px;
+    margin-top: 16px;
+    color: #050505;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 120%;
+    border: none;
+    border-radius: 100px;
+    background-color: $coral;
+  }
+
+  &__title {
+    width: 800px;
+    background: linear-gradient(155deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include project-section-title;
+  }
+
+  &__description {
+    width: 710px;
+    margin-top: 20px;
+    color: $light-grey;
+    @include project-section-description;
+  }
+
+  &__service {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__service-item {
+
+  }
+
+  &__service-top {
+    position: relative;
+    color: $white;
+    @include info-numbers-text;
+
+    &::after {
+      content: '+';
+      color: $coral;
+    }
+  }
+
+  &__service-bottom {
+    margin-top: 14px;
+    color: $light-grey;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__video-container {
+    position: relative;
+    width: 1080px;
+    height: 450px;
+    margin: 0 auto;
+    margin-top: 150px;
+    border-radius: 160px;
+    background-image: url('../images/poster.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: contrast(150%) invert(15%);
+    transition: .5s;
+
+    &::after {
+      content: 'dream house';
+      width: 810px;
+      position: absolute;
+      bottom: -60px;
+      left: calc(50% - 405px);
+      color: white;
+      @include info-video-title;
+    }
+
+    svg path {
+      transition: 1s;
+    }
+
+    &:hover {
+      box-shadow: 0px 4px 10px 2px rgba(249, 249, 249, 0.5);
+    }
+    &:hover svg path {
+      fill: red;
+    }
+  }
+
+  &__video-cover {
+    position: absolute;
+    bottom: -80px;
+    width: 100%;
+    height: 380px;
+    border-radius: 160px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 38.54%, rgba(18, 18, 18, 0.81) 100%);
+  }
+
+  &__play-button {
+    width: 112px;
+    height: 112px;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 56px);
+    left: calc(50% - 56px);
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

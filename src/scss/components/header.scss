@@ -1,0 +1,78 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
+.header {
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 36px;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  &__logo-text {
+    margin-left: 8px;
+    color: $white;
+    @include logo-text;
+  }
+
+  &__navigate {
+    background-color: $nav-bg;
+    border-radius: 100px;
+  }
+
+  &__links {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    padding: 9px;
+  }
+  &__link {
+    padding: 6px 0;
+    margin-left: 9px;
+    @include nav-link-text;
+    border: 1.1px solid transparent;
+    border-radius: 100px;
+
+    &:hover {
+      cursor: pointer;
+      border: 1.1px solid $dark-grey;
+    }
+
+    a {
+      padding: 8px 13px;
+      color: $dark-grey;
+      text-decoration: none;
+      border-radius: 100px;
+    }
+
+    &_active {
+      border: 1.1px solid $dark-grey;
+    }
+  }
+
+  &__buttons {
+    background-color: $nav-bg;
+    border-radius: 100px;
+    padding: 10px;
+  }
+
+  &__button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    @include nav-link-text;
+
+    &_register {
+      padding: 6px 12px;
+      border-radius: 100px;
+      color: $register-btn-text-color;
+      background-color: $register-btn-bg-color;
+    }
+  }
+}
